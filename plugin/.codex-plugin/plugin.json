@@ -1,0 +1,25 @@
+{
+  "name": "codex-plan-progress",
+  "version": "1.3.0",
+  "description": "Show the selected Codex chat's execution plan in a Windows floating checklist and update completed steps.",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "任务进度",
+    "shortDescription": "执行计划悬浮窗，完成一项勾选一项",
+    "longDescription": "跟随 Codex 当前可见聊天显示执行计划；通过计划工具和生命周期钩子更新进度。Windows 默认使用系统 .NET Framework 4.8+ 的 WPF 原生绘制，在固定透明宿主内呈现动画，保留 Tk 兼容模式。",
+    "category": "Productivity",
+    "capabilities": [
+      "Execution plans",
+      "Lifecycle hooks",
+      "Local window",
+      "Nested subtasks",
+      "Chat-only window"
+    ],
+    "defaultPrompt": [
+      "显示当前聊天的任务进度",
+      "把这次执行计划显示在进度窗口"
+    ]
+  }
+}

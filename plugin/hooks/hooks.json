@@ -1,0 +1,66 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/progress.py\" hook",
+            "commandWindows": "& \"$env:CLAUDE_PLUGIN_ROOT\\scripts\\launcher.ps1\" hook",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/progress.py\" hook",
+            "commandWindows": "& \"$env:CLAUDE_PLUGIN_ROOT\\scripts\\launcher.ps1\" hook",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "(^|[.:_])update_plan$|(^|[.:_])set_plan$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/progress.py\" hook",
+            "commandWindows": "& \"$env:CLAUDE_PLUGIN_ROOT\\scripts\\launcher.ps1\" hook",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/progress.py\" hook",
+            "commandWindows": "& \"$env:CLAUDE_PLUGIN_ROOT\\scripts\\launcher.ps1\" hook",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/progress.py\" hook",
+            "commandWindows": "& \"$env:CLAUDE_PLUGIN_ROOT\\scripts\\launcher.ps1\" hook",
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}

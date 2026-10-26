@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="356" viewBox="0 0 760 356" role="img" aria-labelledby="title description">
+  <title id="title">任务进度：子任务默认收起，按需展开</title>
+  <desc id="description">两张白色圆角卡片展示同一份计划。总进度均为六项中的两项完成，实现交互细节的三个子任务中一项完成。左侧收起子任务，右侧展开。此图为界面示意。</desc>
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#20252D" flood-opacity="0.065"/>
+    </filter>
+    <g id="completed">
+      <circle r="8" fill="#E8F4EE"/>
+      <path d="m-3.5 0 2.4 2.5 4.8-5" fill="none" stroke="#29976C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="running">
+      <circle r="7" fill="none" stroke="#E2E5E8" stroke-width="1.7"/>
+      <path d="M0-7a7 7 0 0 1 7 7" fill="none" stroke="#707A84" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
+    <g id="pending">
+      <circle r="6.5" fill="none" stroke="#D2D6DB" stroke-width="1.5"/>
+    </g>
+    <g id="arrow-right">
+      <path d="m-2.5-4 4 4-4 4" fill="none" stroke="#9A9FA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="arrow-down">
+      <path d="m-4-2 4 4 4-4" fill="none" stroke="#9A9FA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </defs>
+  <rect width="760" height="356" rx="18" fill="#F5F6F8"/>
+  <g font-family="'Segoe UI', 'Microsoft YaHei', sans-serif">
+    <g font-size="12" font-weight="500" fill="#747A84" letter-spacing="1">
+      <text x="44" y="29">默认收起</text>
+      <text x="416" y="29">按需展开</text>
+    </g>
+    <rect x="24" y="46" width="340" height="194" rx="20" fill="#FFFFFF" filter="url(#card-shadow)"/>
+    <rect x="396" y="46" width="340" height="272" rx="20" fill="#FFFFFF" filter="url(#card-shadow)"/>
+    <g fill="#535861" font-size="14" font-weight="600">
+      <text x="46" y="76">任务进度</text>
+      <text x="418" y="76">任务进度</text>
+    </g>
+    <g fill="#F2F4F5">
+      <rect x="283" y="61" width="59" height="23" rx="11.5"/>
+      <rect x="655" y="61" width="59" height="23" rx="11.5"/>
+    </g>
+    <g fill="#6E7580" font-size="11" font-weight="600" text-anchor="middle">
+      <text x="312.5" y="76.5">2 / 6</text>
+      <text x="684.5" y="76.5">2 / 6</text>
+    </g>
+    <g fill="#F0F2F4">
+      <rect x="46" y="95" width="296" height="3" rx="1.5"/>
+      <rect x="418" y="95" width="296" height="3" rx="1.5"/>
+    </g>
+    <g fill="#74B397">
+      <rect x="46" y="95" width="98.667" height="3" rx="1.5"/>
+      <rect x="418" y="95" width="98.667" height="3" rx="1.5"/>
+    </g>
+    <use href="#completed" x="54" y="126"/>
+    <use href="#running" x="54" y="168"/>
+    <use href="#pending" x="54" y="210"/>
+    <g font-size="14">
+      <text x="75" y="131" fill="#777E87">准备运行环境</text>
+      <text x="75" y="173" fill="#363D47">实现交互细节</text>
+      <text x="75" y="215" fill="#717985">检查并交付</text>
+    </g>
+    <text x="294" y="172" fill="#9CA2AA" font-size="11" text-anchor="middle">1 / 3</text>
+    <use href="#arrow-right" x="331" y="168"/>
+    <use href="#completed" x="426" y="126"/>
+    <use href="#running" x="426" y="164"/>
+    <use href="#pending" x="426" y="292"/>
+    <g font-size="14">
+      <text x="447" y="131" fill="#777E87">准备运行环境</text>
+      <text x="447" y="169" fill="#363D47">实现交互细节</text>
+      <text x="447" y="297" fill="#717985">检查并交付</text>
+    </g>
+    <text x="666" y="168" fill="#9CA2AA" font-size="11" text-anchor="middle">1 / 3</text>
+    <use href="#arrow-down" x="703" y="164"/>
+    <path d="M426 185v77" stroke="#EEF0F2" stroke-width="1.5" stroke-linecap="round"/>
+    <use href="#completed" x="451" y="196"/>
+    <use href="#running" x="451" y="227"/>
+    <use href="#pending" x="451" y="258"/>
+    <g font-size="13">
+      <text x="472" y="200.5" fill="#858C94">圆角白底与轻阴影</text>
+      <text x="472" y="231.5" fill="#48515D">平滑展开与收起</text>
+      <text x="472" y="262.5" fill="#838B96">会话跟随与拖动</text>
+    </g>
+    <text x="380" y="341" fill="#A1A7AF" font-size="10" text-anchor="middle" letter-spacing="1">界面示意</text>
+  </g>
+</svg>
